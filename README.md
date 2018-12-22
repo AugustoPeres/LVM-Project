@@ -1,9 +1,22 @@
 # Model Checking the BGP
 ---
 
+<center>*What is the BGP*</center>
+
+The Border Gateway Protocol (BGP) is a protocol used to change routing information used on the internet.
+
+Each node in the network communicates to all other nodes the cost of reaching some target node $t$. Then each node that received new information will decide whether or not it is cheaper to change route.
+
+The question we want to answer is whether or not, at some point in time, the nodes will stop communicating. For that we will implement said protocol in promela and use the spin model checker to verify the convergence of the network.
+
+## Introduction
+
+Because writing promela code for networks would be very tedious and prone to lots of hard to find bugs like exchanged array indexes etc. All the `promela` programs present in this repository were created by the python script `bgp_generator.py`
+
+---
+
 ## Usage
 
-In this repository there is python script that generates `promela` our promela code.
 
 It shoul be used as follows:
 
